@@ -31,7 +31,7 @@ bash_profile=$(ps aux | grep '[u]pload-bash-profile.sh')
 
 # Automatically push bash profile when I change it
 if [ -z "$personal_cron" ]; then
-    nohup fswatch -0 ~/.bash_profile | xargs -0 -n1 bash ~/Documents/PERSONAL/scripts/upload-bash-profile.sh &
+    nohup fswatch -0 ~/.bash_profile | xargs -0 -n1 bash ~/Documents/PERSONAL/scripts/upload-bash-profile.sh > /dev/null 2>&1 &
 fi
 
 
