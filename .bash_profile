@@ -23,3 +23,16 @@ source '/Users/vps/google-cloud-sdk/completion.bash.inc'
 # Automatically updates crontab from personal file
 nohup fswatch -0 /Users/vps/Documents/PERSONAL/scripts/personal-cron | xargs -0 -n1 crontab &
 
+function autocommit {
+    git add .
+    git commit -a -m "Autocommit"
+    git push
+}
+
+function upload_bashprofile {
+	cp $1 ~/Documents/bash_profile/.bash_profile
+	cd ~/Documents/bash_profile
+	autocommit
+	cd -
+}
+
