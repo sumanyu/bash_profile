@@ -1,4 +1,4 @@
-PATH=$PATH:~/bin
+PATH=~/bin:/usr/local/bin:$PATH
 export PATH
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
