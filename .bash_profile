@@ -34,4 +34,3 @@ if [ -z "$personal_cron" ]; then
     nohup fswatch -0 ~/.bash_profile | xargs -0 -n1 bash ~/Documents/PERSONAL/scripts/upload-bash-profile.sh > /dev/null 2>&1 &
 fi
 
-
