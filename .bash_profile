@@ -37,11 +37,11 @@ if [ -z "$personal_cron" ]; then
     nohup fswatch -0 ~/.bash_profile | xargs -0 -n1 bash $personal_scheduler/upload-bash-profile.sh > /dev/null 2>&1 &
 fi
 
-scripts=$(ps aux | grep '[u]pload-scripts.sh')
+# scripts=$(ps aux | grep '[u]pload-scripts.sh')
 
-# Automatically commit scripts when they change
-if [ -z "$scripts" ]; then
-    nohup fswatch -0 $personal_scheduler | xargs -0 -n1 bash $personal_scheduler/upload-scripts.sh > /dev/null 2>&1 &
-fi
+# # Automatically commit scripts when they change
+# if [ -z "$scripts" ]; then
+#     nohup fswatch -0 $personal_scheduler | xargs -0 -n1 bash $personal_scheduler/upload-scripts.sh > /dev/null 2>&1 &
+# fi
 
 alias doit="/usr/bin/open -a "/Applications/Emacs.app" '/Users/vps/Dropbox/Docs/do-it.org'"
