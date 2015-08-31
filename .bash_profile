@@ -45,4 +45,3 @@ if [ -z "$scripts" ]; then
 fi
 
 alias doit="/usr/bin/open -a "/Applications/Emacs.app" '/Users/vps/Dropbox/Docs/do-it.org'"
-
