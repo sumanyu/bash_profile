@@ -32,3 +32,5 @@ fi
 
 alias doit="/usr/bin/open -a "/Applications/Emacs.app" '/Users/vps/Dropbox/Docs/do-it.org'"
 alias bp="nano ~/.bash_profile"
+
+core=“sbt "project vps-core" "container:restart" "shell"
